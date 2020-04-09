@@ -1,0 +1,10 @@
+int designerPdfViewer(vector<int> h, string word) {
+int max = 0;
+const char * cstr = word.c_str();
+for(int i = 0; i < word.length(); i++){
+   if(h[(cstr[i] - 97)] > max){
+       max = h[(cstr[i] - 97)];
+   }
+}
+return max*word.length();
+}
